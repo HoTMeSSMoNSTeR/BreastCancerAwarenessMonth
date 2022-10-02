@@ -1,0 +1,479 @@
+body {
+    margin: 0;
+    padding: 3em;
+    background-image: url(blackpink.jpeg);
+    background-size: cover;
+}
+
+.heading {
+    margin-top: 0.5em;
+    padding-left: 2em;
+    padding-top: 0;
+}
+
+.intro {
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    text-shadow: 3px 3px 7px black;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#theH1 {
+    font-weight: 700;
+    font-size: 4em;
+    margin-left: 1em;
+}
+
+.opener {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.music-btn-box {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10em;
+}
+
+.musicBtn {
+    background-color: transparent;
+    color: #FD68B4;
+    font-family: 'Permanent Marker', cursive;
+    border: none;
+    font-size: 1.5em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+.musicBtn:hover {
+    margin-bottom: -1em;
+    transform: translateY(-0.65em);
+    text-shadow: 0px 2px 3.5px rgba(253, 165, 218, 75%);
+}
+
+div .picture-frame {
+    background-color: #ff4faa;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5em;
+    margin-top: 1em;
+    width: 35em;
+}
+
+.box-style {
+    box-shadow: 0.5em 0.5em 1.5em 0.5em black;
+    border-radius: 1.5em;
+    background-color: #fe369d;
+    color: #FCF7F8;
+}
+
+.me-picture {
+    width: 13em;
+    margin: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.3em black;
+
+}
+
+.about-me {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 1em;
+    color: #FCF7F8;
+}
+
+.music-container {
+    height: auto;
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.music-player {
+    border-radius: 1em;
+    width: 30%;
+    height: 10em;
+    border: none;
+}
+
+#picCarousel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 29em;
+    width: 21em;
+    margin-top: 5em;
+    margin-left: 9em;
+    margin-bottom: 4em;
+}
+
+.carousel-image,
+.carousel-image img {
+    width: 19em;
+    height: 26em;
+    border-radius: 1em;
+    box-shadow: 0 0 0.3em black;
+    position: absolute;
+}
+
+.carousel,
+.carousel .pic-visible {
+    display: block;
+
+}
+
+.carousel-image,
+.pic-invisible {
+    display: none;
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-between;
+    width: 21em;
+}
+
+.arrow-btn {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: rgba(244, 235, 232, 50%);
+    font-size: 1.75em;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* for if I use the youtube video instead */
+/* .youtube {
+    margin-left: 40em;
+    margin-bottom: 3em;
+    width: 23em;
+    height: 17em;
+    background-color: transparent;
+} */
+
+/* .first-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: right;
+    width: 100%;
+    height: 30em;
+} */
+
+.subsection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4em;
+}
+
+.twitch-box {
+    border-radius: 10px;
+}
+
+.twitch-box:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.glow-box {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: black;
+}
+
+.glow-box:hover {
+    animation: glow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.first-subsection {
+    display: flex;
+    flex-direction: row;
+    height: 15em;
+    padding-left: 1em;
+    margin-top: 1em;
+}
+
+.facts {
+    width: 10em;
+    height: 10em;
+    margin-left: 25em;
+    margin-right: 2em;
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    position: absolute;
+    background-color: #FD8DC7;
+}
+
+
+div .box1 {
+    margin-left: 26em;
+}
+
+.first-subsection:hover .box1 {
+    animation: slideFarLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+div .box2 {
+    margin-left: 27em;
+}
+
+.first-subsection:hover .box2 {
+    animation: slideLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+div .box3 {
+    margin-left: 28em;
+}
+
+.first-subsection:hover .box3 {
+    animation: slideRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+div .box4 {
+    margin-left: 29em;
+}
+
+.first-subsection:hover .box4 {
+    animation: slideFarRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.logo-img {
+    height: 5em;
+    margin-right: 1em;
+    border-radius: 1em;
+}
+
+.second-subsection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resourcesBC {
+    background-color: #9F2D68;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    width: 35em;
+    height: 5em;
+    margin-top: 1em;
+    margin-left: 7em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+}
+
+.resource-information {
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.resource-information p {
+    font-size: 0.75em;
+}
+
+.resource-link {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+
+
+
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px 0px black;
+    }
+
+    5% {
+        box-shadow: 0 0 30px 5px black;
+    }
+
+    10% {
+        box-shadow: 0 0 40px 10px black;
+    }
+
+    15% {
+        box-shadow: 0 0 50px 15px black;
+    }
+
+    20% {
+        box-shadow: 0 0 50px 20px black;
+    }
+
+    25% {
+        box-shadow: 0 0 50px 25px black;
+    }
+
+    30% {
+        box-shadow: 0 0 50px 30px black;
+    }
+
+    35% {
+        box-shadow: 0 0 50px 35px black;
+    }
+
+    40% {
+        box-shadow: 0 0 50px 40px black;
+    }
+
+    45% {
+        box-shadow: 0 0 50px 45px black;
+    }
+
+    50% {
+        box-shadow: 0 0 50px 50px black;
+    }
+
+    55% {
+        box-shadow: 0 0 50px 55px black;
+    }
+
+    60% {
+        box-shadow: 0 0 50px 60px black;
+    }
+
+    65% {
+        box-shadow: 0 0 50px 65px black;
+    }
+
+    70% {
+        box-shadow: 0 0 50px 70px black;
+    }
+
+    75% {
+        box-shadow: 0 0 50px 75px black;
+    }
+
+    80% {
+        box-shadow: 0 0 50px 80px black;
+    }
+
+    85% {
+        box-shadow: 0 0 50px 85px black;
+    }
+
+    90% {
+        box-shadow: 0 0 50px 90px black;
+    }
+
+    95% {
+        box-shadow: 0 0 50px 95px black;
+    }
+
+    100% {
+        box-shadow: 0 0 50px 100px black;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes slideFarLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-18em);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-6em);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(6em);
+    }
+}
+
+@keyframes slideFarRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(18em);
+    }
+}
