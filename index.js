@@ -78,6 +78,7 @@ const renderFactsOne = factsOne.map(function (fact) {
 
 document.getElementById("first-subsection").innerHTML = renderFactsOne
 
+
 // resources bC
 
 const resources = {
@@ -135,29 +136,19 @@ function ResourceList(data) {
     this.getResourceHtml = function (data) {
         const { name, imageAlt, mission, link, logo, fundraiser, linkText } = this;
         return `
-                              
+                <div class="resourcesBC box-style">             
                   <img class="logo-img" src="${logo}" alt="${imageAlt}">
-                      <div class="resource-information">
-                          <a class="resource-link" href="${link}"><p>${name}</p></a>
+                    <div class="resource-information">
+                          <a target="_blank" class="resource-link" href="${link}"><p>${name}</p></a>
                       <p class="resource-mission">Their Mission: ${mission}</p>
-                      <p> Help out here➜<a class="resource-fundraiser" href="${fundraiser}">${linkText}</a>
+                      <p> Help out here➜ <a target="_blank" class="resource-fundraiser" href="${fundraiser}">${linkText}</a>
                       </p>
-              </div>
+                    </div>
+                </div>
               `
     }
 }
 
-
-
-
-
-function renderResources() {
-    document.getElementById("bccsi").innerHTML = stickIt.getResourceHtml()
-    document.getElementById("nbcf").innerHtml = nationalBCF.getResourceHtml()
-    document.getElementById("bcrf").innerHtml = bcResearchFoundation.getResourceHtml()
-    document.getElementById("sgk").innerHtml = susanGKomen.getResourceHtml()
-    document.getElementById("acs").innerHtml = americanCS.getResourceHtml()
-}
 
 
 const stickIt = new ResourceList(resources.bccsi)
@@ -167,5 +158,12 @@ const susanGKomen = new ResourceList(resources.sgk)
 const americanCS = new ResourceList(resources.acs)
 
 
+function renderResources() {
+    document.getElementById("bccsi").innerHTML = stickIt.getResourceHtml()
+    document.getElementById("nbcf").innerHTML = nationalBCF.getResourceHtml()
+    document.getElementById("bcrf").innerHTML = bcResearchFoundation.getResourceHtml()
+    document.getElementById("sgk").innerHTML = susanGKomen.getResourceHtml()
+    document.getElementById("acs").innerHTML = americanCS.getResourceHtml()
+}
 
 renderResources()
