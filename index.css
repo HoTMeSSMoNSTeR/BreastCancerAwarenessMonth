@@ -268,7 +268,7 @@ div .box4 {
 
 .second-subsection {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .resourcesBC {
