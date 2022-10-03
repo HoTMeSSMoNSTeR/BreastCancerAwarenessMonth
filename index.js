@@ -167,3 +167,18 @@ function renderResources() {
 }
 
 renderResources()
+
+
+const factsThree = [
+    'One in eight women in the U.S. will be diagnosed with breast cancer',
+    'Men can get breast cancer too, and the symptoms are the same',
+    'Metastatic breast cancer is when the cancer has spread to other parts of the body',
+    ''
+]
+
+const renderFactsThree = factsThree.map(function (fact) {
+    const number = factsThree.indexOf(fact) + 1
+    return `<div class="box-style box${number} facts">${fact}</div>`
+}).join('')
+
+document.getElementById("third-subsection").innerHTML = renderFactsThree
