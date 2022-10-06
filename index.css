@@ -5,6 +5,22 @@ body {
     background-size: auto;
 }
 
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(26, 26, 26, 0.9);
+    border-radius: 3em;
+    margin-block: 0.1em;
+}
+
+body::-webkit-scrollbar-thumb,
+.popup-story::-webkit-scrollbar-thumb {
+    background-color: #ff4faa;
+    border-radius: 3em;
+}
+
 .heading {
     margin-top: 0.5em;
     padding-left: 2em;
@@ -61,7 +77,7 @@ div .picture-frame {
     display: flex;
     justify-content: space-around;
     margin-left: 33em;
-    margin-top: -15em;
+    margin-top: -6em;
     width: 35rem;
     height: 17em;
 }
@@ -86,6 +102,7 @@ div .picture-frame {
     font-weight: 700;
     font-style: italic;
     font-size: 0.9rem;
+    margin-top: 5em;
     margin: 1em;
     color: #FCF7F8;
     overflow: auto;
@@ -151,24 +168,6 @@ div .picture-frame {
     font-family: 'Permanent Marker', cursive;
 }
 
-/* for if I use the youtube video instead */
-/* .youtube {
-    margin-left: 40em;
-    margin-bottom: 3em;
-    width: 23em;
-    height: 17em;
-    background-color: transparent;
-} */
-
-/* .first-section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: right;
-    width: 100%;
-    height: 30em;
-} */
-
 .subsection {
     display: flex;
     flex-direction: row;
@@ -186,6 +185,7 @@ div .picture-frame {
 }
 
 .glow-box {
+    margin-top: 3em;
     border-radius: 10px;
     padding: 5px;
     background-color: black;
@@ -278,6 +278,7 @@ div .box4 {
     flex-wrap: nowrap;
     margin-top: 2em;
     margin-bottom: 2em;
+    align-items: center;
 }
 
 .resourcesBC {
@@ -292,13 +293,17 @@ div .box4 {
     flex-direction: row;
     flex-wrap: no-wrap;
     justify-content: flex-start;
-    align-items: center;
     padding: 1em;
+}
+
+.resourcesBC:hover {
+    box-shadow: 5px 5px 10px #FDADDD;
+    transform: translateY(-0.3em);
 }
 
 .resource-information {
     font-family: 'Ubuntu', sans-serif;
-    margin-top: 0.5em;
+    margin-top: -0.75em;
     margin-bottom: 1em;
 }
 
@@ -320,10 +325,168 @@ div .box4 {
 }
 
 
+.my-story {
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ff4faa;
+    margin: 2.5em;
+    position: relative;
+}
+
+
+.my-story-img {
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #1a1a1a;
+    filter: grayscale(100%);
+    border: 0.5px solid #1a1a1a;
+}
+
+.img-overlay {
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(255, 66, 164, 0.25);
+}
+
+.my-story p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FDADDD;
+    text-shadow: 0 0 10px #1a1a1a;
+    cursor: pointer;
+}
+
+.my-story p:hover {
+    text-shadow: 0 0 5px #FCF7F8;
+}
+
+/* my story popup */
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.popup-story {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 85%;
+    height: 85%;
+    margin: 2em;
+    background-color: #FDADDD;
+    color: #1a1a1a;
+    overflow: auto;
+    border-radius: 3em;
+}
+
+.popup-story::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.popup-story::-webkit-scrollbar-track {
+    background-color: rgba(26, 26, 26, 0.75);
+    margin-block: 1.5em;
+    border-radius: 3em;
+}
+
+div .story-text {
+    margin: 3em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.fourth-subsection {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.symptom-list {
+    margin-left: 12em;
+    position: relative;
+}
+
+
+.warnings {
+    height: 1.5em;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0.3em 0.6em;
+    background-color: #1a1a1a;
+    font-size: 5em;
+    font-weight: 700;
+    color: #FD68B4;
+    text-shadow: 7px 7px 7px black;
+    border: 5px solid #FD68B4;
+    box-shadow: 10px 10px 10px black;
+    animation-name: blinking;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+.warnings:hover {
+    background-color: #FD68B4;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.ul-symptoms {
+    position: absolute;
+    bottom: 240px;
+    left: 40px;
+    list-style: disc;
+    cursor: pointer;
+    height: 1em;
+}
+
+
+.list-item {
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #1a1a1a;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+div .display {
+    color: transparent;
+    background-color: #FD68B4;
+    animation: none;
+    text-shadow: none;
+}
+
+.fifth-subsection {
+    margin-left: 7em;
+    margin-top: -2em;
+    margin-bottom: 1em;
+}
 
 
 
-
+/* animation keyframes */
 
 @keyframes glow {
     0% {
@@ -494,5 +657,29 @@ div .box4 {
 
     100% {
         transform: translateX(18em);
+    }
+}
+
+@keyframes blinking {
+    0% {
+        text-shadow: 5px 5px 7px #FCF7F8;
+    }
+
+    50% {
+        text-shadow: 7px 7px 7px black;
+    }
+
+    100% {
+        text-shadow: 5px 5px 7px #FCF7F8;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        color: transparent;
+    }
+
+    100% {
+        color: #1a1a1a;
     }
 }
