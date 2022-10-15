@@ -484,6 +484,19 @@ div .display {
     margin-bottom: 1em;
 }
 
+.wisdom {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3em;
+    margin: 1em auto;
+    font-weight: bold;
+    color: #FDADDD;
+    text-align: center;
+    text-shadow: 0 0 10px #1a1a1a;
+}
+
+.wordsof:hover {
+    text-shadow: 0 0 5px #FCF7F8;
+}
 
 
 /* animation keyframes */
