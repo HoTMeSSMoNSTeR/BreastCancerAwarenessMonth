@@ -15,3 +15,8 @@ Built with:
 HTML
 CSS
 JacaScript
+
+Live URL:
+https://hotmessmonster.github.io/BreastCancerAwarenessMonth/
+
+I'm very happy with the design and the animations in this project. This project allowed me to branch out and figure out how to do things I had not learned yet. 
