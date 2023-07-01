@@ -10,3 +10,8 @@ me that I can't set innerHTML to null
 
 
 this page IS NOT finished, it still needs cleaning up and refactoring and all kinds of things 
+
+Built with:
+HTML
+CSS
+JacaScript
